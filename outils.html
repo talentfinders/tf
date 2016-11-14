@@ -1,0 +1,1191 @@
+<?php
+
+session_start();
+require ('scripts/config.php');
+
+	 	  
+if (isset($_SESSION['pseudo']))
+								{
+
+							 $query = $bdd->query("	SELECT * FROM profile where nomMemb='".$_SESSION['pseudo']."'")->fetch(); 
+	}
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>Blank Page - Ace Admin</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+		<!-- page specific plugin styles -->
+
+		
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+<!-- page specific plugin styles -->
+		<link rel="stylesheet" href="assets/css/jquery-ui.custom.min.css" />
+		<link rel="stylesheet" href="assets/css/jquery.gritter.min.css" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+<script src="vendor/jquery/jquery.js"></script>
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+		<!-- Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+	<link href="css/blog.css" rel="stylesheet">
+ <!-- Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+	
+ <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="no-skin">
+		 <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class=""></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> Bootstrap
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Grayscale</h1>
+                        <p class="intro-text">A free, responsive, one page Bootstrap theme.
+                            <br>Created by Start Bootstrap.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+</br></br></br>
+<div class="container">	
+
+ <section >
+
+ <div class="col-md-4">
+      <div class="panel panel-default panel-profile" style=" border:1px solid white;">
+        <div class="panel-heading panel-primary" style="background-color:white;font-size:18px; color:black; border:1px solid white; "><h4>Menu
+		
+		<form class="navbar-form pull-right">
+<input type="text" style="width:200px" class="input-small"
+placeholder="Search">
+<button type="submit" class="ic-bleublanc"><i class="ace-icon fa fa-search icon-animated-search"></i></button>
+</form>
+		
+	</h4>	</div> 
+
+<div class="panel-body text-center" style="background-color:white; font-size:18px;">
+          
+<button class=" ic-bleublanc"><i class="ace-icon fa fa-home icon-animated-vertical"></i></button>
+
+<button class=" ic-cafeblanc"><i class="ace-icon fa fa-globe icon-animated-horizontal"></i></button>
+<button class=" ic-bsombreblanc"><span class="glyphicon
+glyphicon-user"></span></button>
+<a href="photo.html"><button class=" ic-violetblanc"><span class="glyphicon
+glyphicon-picture"></span></button></a>
+<button class=" ic-vertblanc"><span class="glyphicon
+glyphicon-headphones"></span></button>
+<button class=" ic-rougeblanc"><span class="glyphicon
+glyphicon-calendar"></span></button>
+<button class=" ic-jauneblanc"><span class="glyphicon
+glyphicon-star"></span></button>
+<button class=" ic-vclaireblanc"><i class="ace-icon fa fa-envelope icon-animated-vertical"></i></button>
+<button class=" ic-whatsapblanc"><span class="glyphicon
+glyphicon-cog"></span></button>
+<a href="video.html"><button class=" ic-pinkblanc"><span class="glyphicon
+glyphicon-film"></span></button></a>
+<button class=" ic-violblanc"><span class="glyphicon
+glyphicon-upload"></span></button>
+<button class=" ic-orangeblanc"><span class="glyphicon
+glyphicon-shopping-cart"></button>
+<button class=" ic-lemonblanc"><i class="ace-icon fa fa-bell icon-animated-bell"></i></button>
+<button class=" ic-redsaleblanc"><span class="glyphicon
+glyphicon-shopping-cart"></button>
+<button class=" ic-vertligblanc"><span class="glyphicon
+glyphicon-bell"></span></button>
+
+        </div>
+      </div>
+    </div>
+
+</section>	
+<div class="col-sm-6">
+										<div class="widget-box">
+											<div class="widget-header">
+												<h4 class="widget-title lighter smaller">
+													<i class="ace-icon fa fa-comment blue"></i>
+													Conversation
+												</h4>
+											</div>
+
+											<div class="widget-body">
+												<div class="widget-main no-padding">
+													<div class="dialogs">
+														<div class="itemdiv dialogdiv" >
+															<div class="user">
+																<img alt="Alexa's Avatar" src="assets/images/avatars/avatar1.png" />
+															</div>
+
+															<div class="body" >
+															
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">4 sec</span>
+																</div>
+
+																<div class="name">
+																	<a href="#">Alexa</a>
+																</div>
+																<div class="text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+																<div class="tools">
+																	<a href="#" class="btn btn-minier btn-info">
+																		<i class="icon-only ace-icon fa fa-share"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv dialogdiv">
+															<div class="user">
+																<img alt="John's Avatar" src="assets/images/avatars/avatar.png" />
+															</div>
+
+															<div class="body">
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="blue">38 sec</span>
+																</div>
+
+																<div class="name">
+																	<a href="#">John</a>
+																</div>
+																<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+
+																<div class="tools">
+																	<a href="#" class="btn btn-minier btn-info">
+																		<i class="icon-only ace-icon fa fa-share"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv dialogdiv">
+															<div class="user">
+																<img alt="Bob's Avatar" src="assets/images/avatars/user.jpg" />
+															</div>
+
+															<div class="body">
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="orange">2 min</span>
+																</div>
+
+																<div class="name">
+																	<a href="#">Bob</a>
+																	<span class="label label-info arrowed arrowed-in-right">admin</span>
+																</div>
+																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+																<div class="tools">
+																	<a href="#" class="btn btn-minier btn-info">
+																		<i class="icon-only ace-icon fa fa-share"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv dialogdiv">
+															<div class="user">
+																<img alt="Jim's Avatar" src="assets/images/avatars/avatar4.png" />
+															</div>
+
+															<div class="body">
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="grey">3 min</span>
+																</div>
+
+																<div class="name">
+																	<a href="#">Jim</a>
+																</div>
+																<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+
+																<div class="tools">
+																	<a href="#" class="btn btn-minier btn-info">
+																		<i class="icon-only ace-icon fa fa-share"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv dialogdiv">
+															<div class="user">
+																<img alt="Alexa's Avatar" src="assets/images/avatars/avatar1.png" />
+															</div>
+
+															<div class="body">
+																<div class="time">
+																	<i class="ace-icon fa fa-clock-o"></i>
+																	<span class="green">4 min</span>
+																</div>
+
+																<div class="name">
+																	<a href="#">Alexa</a>
+																</div>
+																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+																<div class="tools">
+																	<a href="#" class="btn btn-minier btn-info">
+																		<i class="icon-only ace-icon fa fa-share"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<form>
+														<div class="form-actions">
+															<div class="input-group">
+																<input placeholder="Type your message here ..." type="text" class="form-control" name="message" />
+																<span class="input-group-btn">
+																	<button class="btn btn-sm btn-info no-radius" type="button">
+																		<i class="ace-icon fa fa-share"></i>
+																		Send
+																	</button>
+																</span>
+															</div>
+														</div>
+													</form>
+												</div><!-- /.widget-main -->
+											</div><!-- /.widget-body -->
+										</div><!-- /.widget-box -->
+									</div><!-- /.col -->
+									
+									<button type="submit" class="btn btn-lg btn-pink no-border "><span
+class="glyphicon glyphicon-comment"></span></button>
+
+
+
+
+<div class="space"></div>
+
+								<div class="row">
+									<div class="col-sm-6" id="default-buttons">
+										<h3 class="row header smaller lighter purple">
+											<span class="col-sm-6"> Default Buttons </span><!-- /.col -->
+
+											<span class="col-sm-6">
+												<label class="pull-right inline">
+													<small class="muted smaller-90">Border:</small>
+
+													<input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />
+													<span class="lbl middle"></span>
+												</label>
+											</span><!-- /.col -->
+										</h3><!-- /.row -->
+
+										<p>
+											<button class="btn">Default </button>
+											<button class="btn btn-primary">Primary</button>
+											<button class="btn btn-info">Info</button>
+											<button class="btn btn-success">Success</button>
+										</p>
+
+										<p>
+											<button class="btn btn-warning">Warning</button>
+											<button class="btn btn-danger">Danger</button>
+											<button class="btn btn-inverse">Inverse</button>
+											<button class="btn btn-pink">Pink</button>
+										</p>
+
+										<p>
+											<button class="btn btn-purple">Purple</button>
+											<button class="btn btn-yellow">Yellow</button>
+											<button class="btn btn-grey">Grey</button>
+											<button class="btn btn-light">Light</button>
+											<button class="btn btn-link">Link</button>
+										</p>
+
+										<p>
+											<button type="button" class="btn btn-white">White</button>
+											<button type="button" class="btn btn-white btn-default">Default</button>
+											<button type="button" class="btn btn-white btn-primary">Primary</button>
+											<button type="button" class="btn btn-white btn-info">Info</button>
+											<button type="button" class="btn btn-white btn-success">Success</button>
+											<button type="button" class="btn btn-white btn-warning">Warning</button>
+										</p>
+
+										<p>
+											<button type="button" class="btn btn-white btn-danger btn-sm">Danger</button>
+											<button type="button" class="btn btn-white btn-yellow btn-sm">Yellow</button>
+											<button type="button" class="btn btn-white btn-pink btn-sm">Pink</button>
+											<button type="button" class="btn btn-white btn-purple btn-sm">Purple</button>
+											<button type="button" class="btn btn-white btn-inverse btn-sm">Inverse</button>
+										</p>
+
+										<h3 class="header smaller lighter green">Button with Icons</h3>
+
+										<p>
+											<button class="btn btn-white btn-info btn-bold">
+												<i class="ace-icon fa fa-floppy-o bigger-120 blue"></i>
+												Backup
+											</button>
+
+											<button class="btn btn-white btn-warning btn-bold">
+												<i class="ace-icon fa fa-trash-o bigger-120 orange"></i>
+												Delete
+											</button>
+
+											<button class="btn btn-white btn-default btn-round">
+												<i class="ace-icon fa fa-times red2"></i>
+												Cancel
+											</button>
+										</p>
+
+										<div class="hr hr-dotted hr-16"></div>
+
+										<p>
+											<button class="btn">
+												<i class="ace-icon fa fa-pencil align-top bigger-125"></i>
+												Default
+											</button>
+
+											<button class="btn btn-primary">
+												<i class="ace-icon fa fa-flask align-top bigger-125"></i>
+												Primary
+											</button>
+
+											<button class="btn btn-info">
+												Info
+												<i class="ace-icon fa fa-print  align-top bigger-125 icon-on-right"></i>
+											</button>
+										</p>
+
+										<p>
+											<button class="btn btn-lg btn-success">
+												<i class="ace-icon fa fa-check"></i>
+												Success
+											</button>
+
+											<button class="btn btn-sm btn-warning">
+												<i class="ace-icon fa fa-fire bigger-110"></i>
+												<span class="bigger-110 no-text-shadow">Warning</span>
+											</button>
+
+											<button class="btn btn-xs btn-danger">
+												<i class="ace-icon fa fa-bolt bigger-110"></i>
+
+												Danger
+												<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+											</button>
+										</p>
+
+										<p>
+											<button class="btn btn-info">
+												<i class="ace-icon fa fa-signal icon-only bigger-150"></i>
+											</button>
+
+											<button class="btn btn-warning btn-xs">
+												<i class="ace-icon fa fa-wrench  bigger-110 icon-only"></i>
+											</button>
+
+											<button class="btn btn-danger btn-sm">
+												<i class="ace-icon fa fa-reply icon-only"></i>
+											</button>
+
+											<button class="btn btn-grey btn-lg">
+												<i class="ace-icon fa fa-trash-o fa-2x icon-only"></i>
+											</button>
+										</p>
+									</div><!-- /.col -->
+
+									<div class="col-sm-6">
+										<h3 class="header smaller lighter red">Button Sizing</h3>
+
+										<p>
+											<button class="btn btn-minier btn-yellow">Minier</button>
+											<button class="btn btn-xs">Mini</button>
+											<button class="btn btn-sm btn-primary">Small</button>
+											<button class="btn btn-info">Default</button>
+											<button class="btn btn-lg btn-success">Large Size</button>
+										</p>
+
+										<p>
+											<button class="btn btn-warning btn-xlg">Larger Size</button>
+											<button class="btn btn-danger">Default</button>
+											<button class="btn btn-sm btn-inverse">Small</button>
+											<button class="btn btn-xs btn-pink">Pink</button>
+											<button class="btn btn-minier btn-purple">Purple</button>
+										</p>
+										<h3 class="header smaller lighter grey">Disabled Buttons</h3>
+
+										<p>
+											<button class="btn disabled">Default </button>
+											<button class="btn disabled btn-primary">Primary</button>
+											<button class="btn disabled btn-info">Info</button>
+											<button class="btn disabled btn-success">Success</button>
+										</p>
+
+										<hr />
+										<p>
+											<button class="btn btn-primary btn-block">Block Button</button>
+										</p>
+									</div><!-- /.col -->
+								</div><!-- /.row -->
+
+<div class="row">
+									<div class="col-xs-12">
+										<h3 class="header smaller lighter green">Application Buttons</h3>
+
+										<p></p>
+										<a href="#" class="btn btn-default btn-app radius-4">
+											<i class="ace-icon fa fa-cog bigger-230"></i>
+											Default
+											<span class="badge badge-pink">+3</span>
+										</a>
+
+										<a href="#" class="btn btn-app btn-primary no-radius">
+											<i class="ace-icon fa fa-pencil-square-o bigger-230"></i>
+											Edit
+											<span class="badge badge-warning badge-left">11</span>
+										</a>
+
+										<a href="#" class="btn btn-app btn-success">
+											<i class="ace-icon fa fa-refresh bigger-230"></i>
+											Reload
+										</a>
+
+										<button class="btn btn-app btn-warning">
+											<i class="ace-icon fa fa-undo bigger-230"></i>
+											Undo
+										</button>
+
+										<a href="#" class="btn btn-app btn-info btn-sm no-radius">
+											<i class="ace-icon fa fa-envelope bigger-200"></i>
+											Mailbox
+											<span class="label label-inverse arrowed-in">6+</span>
+										</a>
+
+										<button class="btn btn-app btn-danger btn-sm">
+											<i class="ace-icon fa fa-trash-o bigger-200"></i>
+											Delete
+										</button>
+
+										<button class="btn btn-app btn-purple btn-sm">
+											<i class="ace-icon fa fa-cloud-upload bigger-200"></i>
+											Upload
+										</button>
+
+										<button class="btn btn-app btn-pink btn-sm">
+											<i class="ace-icon fa fa-share bigger-200"></i>
+											Share
+										</button>
+
+										<button class="btn btn-app btn-inverse btn-xs">
+											<i class="ace-icon fa fa-lock bigger-160"></i>
+											Lock
+										</button>
+
+										<button class="btn btn-app btn-grey btn-xs radius-4">
+											<i class="ace-icon fa fa-floppy-o bigger-160"></i>
+
+											Save
+											<span class="badge badge-transparent">
+												<i class="light-red ace-icon fa fa-asterisk"></i>
+											</span>
+										</button>
+
+										<button class="btn btn-app btn-light btn-xs">
+											<i class="ace-icon fa fa-print bigger-160"></i>
+											Print
+										</button>
+
+										<a href="#" class="btn btn-app btn-yellow btn-xs">
+											<i class="ace-icon fa fa-shopping-cart bigger-160"></i>
+											Shop
+										</a>
+
+										<div class="btn-group">
+											<button class="btn btn-app btn-pink btn-xs">
+												<i class="ace-icon fa fa-share bigger-175"></i>
+												Share
+											</button>
+
+											<button data-toggle="dropdown" class="btn btn-app btn-pink btn-xs dropdown-toggle">
+												<span class="bigger-110 ace-icon fa fa-caret-down icon-only"></span>
+											</button>
+
+											<ul class="dropdown-menu dropdown-pink">
+												<li>
+													<a href="#">Action</a>
+												</li>
+
+												<li>
+													<a href="#">Another action</a>
+												</li>
+
+												<li>
+													<a href="#">Something else here</a>
+												</li>
+
+												<li class="divider"></li>
+
+												<li>
+													<a href="#">Separated link</a>
+												</li>
+											</ul>
+										</div><!-- /.btn-group -->
+										
+									</div>
+								</div>
+								
+								
+								<div class="col-sm-6">
+										<h3 class="header smaller lighter green">Lables & Badges</h3>
+
+										<p>
+											<span class="label">Default</span>
+											<span class="label label-success arrowed">Success</span>
+
+											<span class="label label-warning">
+												<i class="ace-icon fa fa-exclamation-triangle bigger-120"></i>
+												Warning
+											</span>
+											<span class="label label-danger arrowed-in">Danger</span>
+											<span class="label label-info arrowed-in-right arrowed">Info</span>
+											<span class="label label-inverse">Inverse</span>
+										</p>
+
+										<p>
+											<span class="label label-white middle">Default</span>
+											<span class="label label-success label-white middle">Success</span>
+
+											<span class="label label-warning label-white middle">
+												<i class="ace-icon fa fa-exclamation-triangle bigger-120"></i>
+												Warning
+											</span>
+											<span class="label label-danger label-white middle">Danger</span>
+											<span class="label label-info label-white middle">Info</span>
+											<span class="label label-purple label-white middle">Inverse</span>
+										</p>
+
+										<p>
+											<span class="badge">1</span>
+											<span class="badge badge-grey">1</span>
+											<span class="badge badge-success">2</span>
+											<span class="badge badge-warning">4</span>
+											<span class="badge badge-danger">6</span>
+											<span class="badge badge-info">8</span>
+											<span class="badge badge-purple">3</span>
+											<span class="badge badge-inverse">10</span>
+											<span class="badge badge-pink">11</span>
+											<span class="badge badge-yellow">2</span>
+										</p>
+
+										<p>
+											<span class="label label-lg label-pink arrowed-right">Large</span>
+											<span class="label label-lg label-yellow arrowed-in arrowed-in-right">Yellow</span>
+											<span class="label label-lg label-purple arrowed">Purple</span>
+										</p>
+
+										<p>
+											<span class="label label-xlg label-primary arrowed arrowed-right">Larger</span>
+											<span class="label label-xlg label-grey arrowed-in-right arrowed-in">Grey</span>
+											<span class="label label-xlg label-light arrowed-in-right">Light</span>
+										</p>
+
+										<p>
+											<span class="label label-sm label-primary arrowed arrowed-right">Smaller</span>
+										</p>
+									</div><!-- /.span -->
+									
+									
+									<div class="row">
+									<div class="col-sm-6">
+										<div class="widget-box">
+											<div class="widget-header">
+												<h4 class="smaller">
+													Tooltips
+													<small>different directions and colors</small>
+												</h4>
+											</div>
+
+											<div class="widget-body">
+												<div class="widget-main">
+													<p class="muted">
+														Tight pants next level keffiyeh
+														<a title="Default tooltip" data-rel="tooltip" href="#">you probably</a>
+														haven't heard of them. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel
+														<a title="Another tooltip" data-rel="tooltip" href="#">have a</a>
+														terry richardson vinyl chambray. A really ironic artisan
+														<a data-rel="tooltip" href="#" data-original-title="Another one here too">whatever</a>
+														keytar, scenester farm-to-table banksy Austin
+														<a title="The last tip!" data-rel="tooltip" href="#">twitter</a>
+														handle.
+													</p>
+
+													<hr />
+
+													<p>
+														<span class="btn btn-sm" data-rel="tooltip" title="Default">Default</span>
+														<span class="btn btn-warning btn-sm tooltip-warning" data-rel="tooltip" data-placement="left" title="Left Warning">Left</span>
+														<span class="btn btn-success btn-sm tooltip-success" data-rel="tooltip" data-placement="right" title="Right Success">Right</span>
+														<span class="btn btn-danger btn-sm tooltip-error" data-rel="tooltip" data-placement="top" title="Top Danger">Top</span>
+														<span class="btn btn-info btn-sm tooltip-info" data-rel="tooltip" data-placement="bottom" title="Bottm Info">Bottom</span>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div><!-- /.col -->
+
+									<div class="col-sm-6">
+										<div class="widget-box">
+											<div class="widget-header">
+												<h4 class="smaller">Popovers</h4>
+											</div>
+
+											<div class="widget-body">
+												<div class="widget-main">
+													<p>
+														<span class="btn btn-sm" data-rel="popover" title="Default" data-content="Heads up! This alert needs your attention, but it's not super important.">Default</span>
+														<span class="btn btn-success btn-sm popover-success" data-rel="popover" data-placement="right" title="<i class='ace-icon fa fa-check green'></i> Right Success" data-content="Well done! You successfully read this important alert message.">Right</span>
+														<span class="btn btn-warning btn-sm popover-warning" data-rel="popover" data-placement="left" title="<i class='ace-icon fa fa-exclamation-triangle orange'></i> Left Warning" data-content="Warning! Best check yo self, you're not looking too good.">Left</span>
+													</p>
+
+													<p>
+														<span class="btn btn-danger btn-sm popover-error" data-rel="popover" data-placement="top" data-original-title="<i class='ace-icon fa fa-bolt red'></i> Top Danger" data-content="Oh snap! Change a few things up and try submitting again.">Top</span>
+														<span class="btn btn-info btn-sm popover-info" data-rel="popover" data-placement="bottom" title="Some Info" data-content="Heads up! This alert needs your attention, but it's not super important.">Bottom</span>
+														<span class="btn btn-inverse btn-sm popover-notitle" data-rel="popover" data-placement="bottom" data-content="Popover without a title!">No Title</span>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div><!-- /.col -->
+								</div><!-- /.row -->
+
+								<hr />
+								<div class="row">
+									<div class="col-sm-6">
+										<h3 class="header smaller lighter green">
+											<i class="ace-icon fa fa-bullhorn"></i>
+											Alerts
+										</h3>
+
+										<div class="alert alert-danger">
+											<button type="button" class="close" data-dismiss="alert">
+												<i class="ace-icon fa fa-times"></i>
+											</button>
+
+											<strong>
+												<i class="ace-icon fa fa-times"></i>
+												Oh snap!
+											</strong>
+
+											Change a few things up and try submitting again.
+											<br />
+										</div>
+
+										<div class="alert alert-warning">
+											<button type="button" class="close" data-dismiss="alert">
+												<i class="ace-icon fa fa-times"></i>
+											</button>
+											<strong>Warning!</strong>
+
+											Best check yo self, you're not looking too good.
+											<br />
+										</div>
+
+										<div class="alert alert-block alert-success">
+											<button type="button" class="close" data-dismiss="alert">
+												<i class="ace-icon fa fa-times"></i>
+											</button>
+
+											<p>
+												<strong>
+													<i class="ace-icon fa fa-check"></i>
+													Well done!
+												</strong>
+												You successfully read this important alert message.
+											</p>
+
+											<p>
+												<button class="btn btn-sm btn-success">Do This</button>
+												<button class="btn btn-sm">Or This One</button>
+											</p>
+										</div>
+
+										<div class="alert alert-info">
+											<button type="button" class="close" data-dismiss="alert">
+												<i class="ace-icon fa fa-times"></i>
+											</button>
+											<strong>Heads up!</strong>
+
+											This alert needs your attention, but it's not super important.
+											<br />
+										</div>
+									</div><!-- /.col -->
+
+									<div class="col-sm-6">
+										<h3 class="row header smaller lighter orange">
+											<span class="col-sm-8">
+												<i class="ace-icon fa fa-bell"></i>
+												Gritter Notifications
+											</span><!-- /.col -->
+
+											<span class="col-sm-4">
+												<label class="pull-right inline">
+													<small class="muted">Dark:</small>
+
+													<input id="gritter-light" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />
+													<span class="lbl middle"></span>
+												</label>
+											</span><!-- /.col -->
+										</h3>
+
+										<p>
+											<i>Click to see</i>
+										</p>
+
+										<p>
+											<button class="btn" id="gritter-regular">Regular</button>
+											<button class="btn btn-info" id="gritter-sticky">Sticky</button>
+											<button class="btn btn-success" id="gritter-without-image">Without Image</button>
+										</p>
+
+										<p>
+											<button class="btn btn-danger" id="gritter-error">Error</button>
+											<button class="btn btn-warning" id="gritter-max3">Max 3</button>
+											<button class="btn btn-primary" id="gritter-center">Center</button>
+											<button class="btn btn-inverse" id="gritter-remove">Remove</button>
+										</p>
+									</div><!-- /.col -->
+								</div><!-- /.row -->
+
+										<div class="btn-toolbar inline middle no-margin">
+											<div data-toggle="buttons" class="btn-group no-margin">
+												<label class="btn btn-sm btn-yellow active">
+													<span class="bigger-110">1</span>
+
+													<input type="radio" value="1" />
+												</label>
+
+												<label class="btn btn-sm btn-yellow">
+													<span class="bigger-110">2</span>
+
+													<input type="radio" value="2" />
+												</label>
+
+												<label class="btn btn-sm btn-yellow">
+													<span class="bigger-110">3</span>
+
+													<input type="radio" value="3" />
+												</label>
+											</div>
+										</div>
+										
+										<div class="social-or-login center">
+												<span class="bigger-110">Or Login Using</span>
+											</div>
+
+											<div class="space-6"></div>
+
+											<div class="social-login center">
+												<a class="btn btn-primary">
+													<i class="ace-icon fa fa-facebook"></i>
+												</a>
+
+												<a class="btn btn-info">
+													<i class="ace-icon fa fa-twitter"></i>
+												</a>
+
+												<a class="btn btn-danger">
+													<i class="ace-icon fa fa-google-plus"></i>
+												</a>
+											</div>
+									</div>
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+ <script src="vendor/bootstrap/js/bootstrap.js"></script>
+
+   <script src="assets/js/jquery-ui.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/bootbox.js"></script>
+		<script src="assets/js/jquery.easypiechart.min.js"></script>
+		<script src="assets/js/jquery.gritter.min.js"></script>
+		<script src="assets/js/spin.js"></script>
+
+		<!-- ace scripts -->
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+<script type="text/javascript">
+			jQuery(function($) {
+				/**
+				$('#myTab a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				  //console.log(e.target.getAttribute("href"));
+				})
+					
+				$('#accordion').on('shown.bs.collapse', function (e) {
+					//console.log($(e.target).is('#collapseTwo'))
+				});
+				*/
+				
+				$('#myTab a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+					//if($(e.target).attr('href') == "#home") doSomethingNow();
+				})
+			
+				
+				/**
+					//go to next tab, without user clicking
+					$('#myTab > .active').next().find('> a').trigger('click');
+				*/
+			
+			
+				$('#accordion-style').on('click', function(ev){
+					var target = $('input', ev.target);
+					var which = parseInt(target.val());
+					if(which == 2) $('#accordion').addClass('accordion-style2');
+					 else $('#accordion').removeClass('accordion-style2');
+				});
+				
+				//$('[href="#collapseTwo"]').trigger('click');
+			
+			
+				$('.easy-pie-chart.percentage').each(function(){
+					$(this).easyPieChart({
+						barColor: $(this).data('color'),
+						trackColor: '#EEEEEE',
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: 8,
+						animate: ace.vars['old_ie'] ? false : 1000,
+						size:75
+					}).css('color', $(this).data('color'));
+				});
+			
+				$('[data-rel=tooltip]').tooltip();
+				$('[data-rel=popover]').popover({html:true});
+			
+			
+				$('#gritter-regular').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a regular notice!',
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="blue">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: 'assets/images/avatars/avatar1.png', //in Ace demo ./dist will be replaced by correct assets path
+						sticky: false,
+						time: '',
+						class_name: (!$('#gritter-light').get(0).checked ? 'gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+				$('#gritter-sticky').on(ace.click_event, function(){
+					var unique_id = $.gritter.add({
+						title: 'This is a sticky notice!',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="red">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: 'assets/images/avatars/avatar.png',
+						sticky: true,
+						time: '',
+						class_name: 'gritter-info' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-without-image').on(ace.click_event, function(){
+					$.gritter.add({
+						// (string | mandatory) the heading of the notification
+						title: 'This is a notice without an image!',
+						// (string | mandatory) the text inside the notification
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="orange">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						class_name: 'gritter-success' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-max3').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a notice with a max of 3 on screen at one time!',
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="green">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: 'assets/images/avatars/avatar3.png', //in Ace demo ./dist will be replaced by correct assets path
+						sticky: false,
+						before_open: function(){
+							if($('.gritter-item-wrapper').length >= 3)
+							{
+								return false;
+							}
+						},
+						class_name: 'gritter-warning' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-center').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a centered notification',
+						text: 'Just add a "gritter-center" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+						class_name: 'gritter-info gritter-center' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+				
+				$('#gritter-error').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a warning notification',
+						text: 'Just add a "gritter-light" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+						class_name: 'gritter-error' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+					
+			
+				$("#gritter-remove").on(ace.click_event, function(){
+					$.gritter.removeAll();
+					return false;
+				});
+					
+			
+				///////
+			
+			
+				$("#bootbox-regular").on(ace.click_event, function() {
+					bootbox.prompt("What is your name?", function(result) {
+						if (result === null) {
+							
+						} else {
+							
+						}
+					});
+				});
+					
+				$("#bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm("Are you sure?", function(result) {
+						if(result) {
+							//
+						}
+					});
+				});
+				
+			/**
+				$("#bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm({
+						message: "Are you sure?",
+						buttons: {
+						  confirm: {
+							 label: "OK",
+							 className: "btn-primary btn-sm",
+						  },
+						  cancel: {
+							 label: "Cancel",
+							 className: "btn-sm",
+						  }
+						},
+						callback: function(result) {
+							if(result) alert(1)
+						}
+					  }
+					);
+				});
+			**/
+				
+			
+				$("#bootbox-options").on(ace.click_event, function() {
+					bootbox.dialog({
+						message: "<span class='bigger-110'>I am a custom dialog with smaller buttons</span>",
+						buttons:
+						{
+							"success" :
+							 {
+								"label" : "<i class='ace-icon fa fa-check'></i> Success!",
+								"className" : "btn-sm btn-success",
+								"callback": function() {
+									//Example.show("great success");
+								}
+							},
+							"danger" :
+							{
+								"label" : "Danger!",
+								"className" : "btn-sm btn-danger",
+								"callback": function() {
+									//Example.show("uh oh, look out!");
+								}
+							}, 
+							"click" :
+							{
+								"label" : "Click ME!",
+								"className" : "btn-sm btn-primary",
+								"callback": function() {
+									//Example.show("Primary button");
+								}
+							}, 
+							"button" :
+							{
+								"label" : "Just a button...",
+								"className" : "btn-sm"
+							}
+						}
+					});
+				});
+			
+			
+			
+				$('#spinner-opts small').css({display:'inline-block', width:'60px'})
+			
+				var slide_styles = ['', 'green','red','purple','orange', 'dark'];
+				var ii = 0;
+				$("#spinner-opts input[type=text]").each(function() {
+					var $this = $(this);
+					$this.hide().after('<span />');
+					$this.next().addClass('ui-slider-small').
+					addClass("inline ui-slider-"+slide_styles[ii++ % slide_styles.length]).
+					css('width','125px').slider({
+						value:parseInt($this.val()),
+						range: "min",
+						animate:true,
+						min: parseInt($this.attr('data-min')),
+						max: parseInt($this.attr('data-max')),
+						step: parseFloat($this.attr('data-step')) || 1,
+						slide: function( event, ui ) {
+							$this.val(ui.value);
+							spinner_update();
+						}
+					});
+				});
+			
+			
+			
+				//CSS3 spinner
+				$.fn.spin = function(opts) {
+					this.each(function() {
+					  var $this = $(this),
+						  data = $this.data();
+			
+					  if (data.spinner) {
+						data.spinner.stop();
+						delete data.spinner;
+					  }
+					  if (opts !== false) {
+						data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+					  }
+					});
+					return this;
+				};
+			
+				function spinner_update() {
+					var opts = {};
+					$('#spinner-opts input[type=text]').each(function() {
+						opts[this.name] = parseFloat(this.value);
+					});
+					opts['left'] = 'auto';
+					$('#spinner-preview').spin(opts);
+				}
+			
+			
+			
+				$('#id-pills-stacked').removeAttr('checked').on('click', function(){
+					$('.nav-pills').toggleClass('nav-stacked');
+				});
+			
+				
+				
+				
+				
+				
+				///////////
+				$(document).one('ajaxloadstart.page', function(e) {
+					$.gritter.removeAll();
+					$('.modal').modal('hide');
+				});
+			
+			});
+		</script>
+		<!-- inline scripts related to this page -->
+	</body>
+</html>
